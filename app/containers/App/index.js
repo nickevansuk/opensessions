@@ -149,7 +149,6 @@ export default class App extends React.Component { // eslint-disable-line react/
         <NotificationBar storeName="cookieNotifications" orientation="bottom" />
         <Footer />
       </div>
-      <Intercom {...intercomProps} />
       <Modal modal={modal} />
     </div>);
   }
