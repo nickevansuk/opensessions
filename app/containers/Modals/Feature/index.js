@@ -32,7 +32,7 @@ export default class FeatureModal extends React.Component { // eslint-disable-li
           <h1><b>Great!</b></h1>
           <p>You will be notified when the feature is available</p>
           <p><span className={styles.sentTick}><img alt="tick" src="/images/tick.svg" /></span></p>
-          <p>Thanks for your continued engagement in Open Sessions!</p>
+          <p>Thanks for your continued engagement in LeisureDesc!</p>
           <br />
           <p><Button onClick={this.context.modal.close}>Close</Button></p>
         </GenericModal>) });
@@ -50,8 +50,8 @@ export default class FeatureModal extends React.Component { // eslint-disable-li
         <h2>The following feature is not yet available:</h2>
         <h3>{feature}</h3>
         <br />
-        <p>Open Sessions is still in its 'beta' phase. This means we're still hard at work adding new features to improve your experience.</p>
-        <p>It's been noted that you were looking for this feature. Thank you for helping to improve Open Sessions!</p>
+        <p>LeisureDesc is still in its 'beta' phase. This means we're still hard at work adding new features to improve your experience.</p>
+        <p>It's been noted that you were looking for this feature. Thank you for helping to improve LeisureDesc!</p>
         <br />
         <p><Checkbox label="Tick this box if you would like to be notified when this feature is added" checked={this.state.notify} onChange={() => this.setState({ notify: !this.state.notify })} /></p>
         <Button onClick={() => this.send()}>OK</Button>

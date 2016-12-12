@@ -121,7 +121,7 @@ export default class SessionForm extends React.Component { // eslint-disable-lin
             return newRow;
           }}
           maxLength={10}
-          maxText="Open Sessions is still in 'beta' mode. You have reached the maximum number of sessions that can be scheduled"
+          maxText="LeisureDesc is still in 'beta' mode. You have reached the maximum number of sessions that can be scheduled"
           components={[
             { label: 'Date', Component: DateField, props: { name: 'startDate' } },
             { label: 'Start time', Component: TimeField, props: { name: 'startTime' } },

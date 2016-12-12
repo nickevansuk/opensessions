@@ -148,7 +148,7 @@ export default class AuthModal extends React.Component { // eslint-disable-line 
       <div className={styles.auth} onKeyDown={event => event.keyCode === KEY_ENTER && this.signUp()}>
         <Button className={styles.facebook} onClick={() => this.facebook()}>Continue with Facebook</Button>
         <div className={styles.or}><hr /><span>or</span><hr /></div>
-        <h2>Create your Open Sessions Account</h2>
+        <h2>Create your LeisureDesc Account</h2>
         <GenericForm>
           {error ? <p className={styles.error}>{error}</p> : null}
           {this.renderQuestion('Email', { name: 'email', props: { value: email, autoFocus: !email, type: 'email' } })}

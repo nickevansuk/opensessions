@@ -11,7 +11,7 @@ export default class AppServer extends React.Component { // eslint-disable-line 
   render() {
     return (<html lang="en">
       <head>
-        <title>{this.props.title || 'Open Sessions'}</title>
+        <title>{this.props.title || 'LeisureDesc'}</title>
         <link type="stylesheet/css" href="/styles.css" />
         {this.props.meta}
       </head>

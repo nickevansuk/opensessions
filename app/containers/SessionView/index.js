@@ -157,7 +157,7 @@ export default class SessionView extends React.Component { // eslint-disable-lin
         </div>
         {organizerButton}
       </div>
-      <Helmet title={session.title} titleTemplate="%s - Open Sessions" meta={[{ property: 'og:image', content: session.image }, { property: 'og:title', content: session.title }, { property: 'og:description', content: (session.description || '').substr(0, 256) }]} />
+      <Helmet title={session.title} titleTemplate="%s - LeisureDesc" meta={[{ property: 'og:image', content: session.image }, { property: 'og:title', content: session.title }, { property: 'og:description', content: (session.description || '').substr(0, 256) }]} />
     </div>);
   }
   renderLastUpdated(session) {
@@ -398,7 +398,7 @@ export default class SessionView extends React.Component { // eslint-disable-lin
       <div className={styles.inner}>
         Share this session
         {disabled ? <sub> (enabled when published)</sub> : null}
-        <SocialShareIcons link={link} title={title} message="I found this cool session on Open Sessions! Wanna go?" />
+        <SocialShareIcons link={link} title={title} message="I found this cool session on LeisureDesc! Wanna go?" />
       </div>
     </div>);
   }

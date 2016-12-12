@@ -1,7 +1,7 @@
 {
   "name": "open-sessions",
   "version": "0.3.0",
-  "description": "The webapp for open sessions",
+  "description": "The webapp for LeisureDesc",
   "main": "index.js",
   "repository": {
     "type": "git",

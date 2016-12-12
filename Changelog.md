@@ -4,7 +4,7 @@
 
 ### 0.1.0
 
-- Beta Open Sessions
+- Beta LeisureDesc
 
 ### 0.2.0
 

@@ -23,7 +23,7 @@ export default class Header extends React.Component { // eslint-disable-line rea
     return (<Sticky zIndex={4}><header className={styles.header}>
       <div className={styles.pageMargin}>
         <Link to="/" className={styles.logoLink}>
-          <img src="/images/open-sessions.svg" alt="Open Sessions" className={styles.logo} />
+          <img src="/images/leisuredesc.png" alt="LeisureDesc" className={styles.logo} />
           <img src="/images/beta.svg" alt="beta" className={styles.beta} />
         </Link>
         <nav className={styles.nav}>

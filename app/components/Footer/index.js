@@ -15,7 +15,7 @@ export default class Footer extends React.Component { // eslint-disable-line rea
             <h2>Info</h2>
             <p><Link to="/">About this site</Link></p>
             <p><Link to="/terms">Terms</Link></p>
-            <p className={styles.iconInfo}><a href="https://github.com/opensessions/opensessions">Open Sessions</a> funded by <a href="https://londonsport.org">London Sport</a></p>
+            <p className={styles.iconInfo}>LeisureDesc is derived from <a href="https://github.com/opensessions/opensessions">Open Sessions</a>, which is funded by <a href="https://londonsport.org">London Sport</a></p>
           </div>
           <div className={styles.column}>
             <Authenticated>

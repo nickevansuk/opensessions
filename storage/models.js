@@ -49,8 +49,8 @@ module.exports = (DataTypes) => ({
         },
         hooks: {
           afterCreate(instance) {
-            return email.sendEmail('Someone has added a new activity on Open Sessions', 'hello+activity@opensessions.io', `
-              <p>A new activity has been created on Open Sessions.</p>
+            return email.sendEmail('Someone has added a new activity on LeisureDesc', 'hello+activity@opensessions.io', `
+              <p>A new activity has been created on LeisureDesc.</p>
               <p>It's called ${instance.name} and the session it is attached to may still be in draft mode.</p>
             `, { substitutions: { '-title-': 'New activity' } });
           }
@@ -236,8 +236,8 @@ module.exports = (DataTypes) => ({
           message(req) {
             const message = req.body;
             if (['name', 'from', 'body'].filter(name => message[name]).length < 3) return Promise.reject('Incomplete form');
-            return email.sendEmail('Someone has submitted a question on Open Sessions', 'hello+organizer@opensessions.io', `
-              <p>Hey, ${this.contactName} &lt;${this.contactEmail}&gt;! A message has been sent on Open Sessions.</p>
+            return email.sendEmail('Someone has submitted a question on LeisureDesc', 'hello+organizer@opensessions.io', `
+              <p>Hey, ${this.contactName} &lt;${this.contactEmail}&gt;! A message has been sent on LeisureDesc.</p>
               <p>Here's the message:</p>
               <p style="padding:.5em;white-space:pre;background:#FFF;">From: ${message.name} &lt;${message.from}&gt;</p>
               <p style="padding:.5em;white-space:pre;background:#FFF;">${message.body}</p>
