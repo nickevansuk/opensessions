@@ -19,7 +19,7 @@ export default class Header extends React.Component { // eslint-disable-line rea
     return <Link to="/profile">Hello, {nickname}! {user.picture ? <img src={user.picture} role="presentation" className={styles.userIcon} /> : null}</Link>;
   }
   render() {
-    const addSession = <span><span className={styles.plus}>+</span> Add a session</span>;
+    const addSession = <span><span className={styles.plus}>+</span> Add an activity</span>;
     return (<Sticky zIndex={4}><header className={styles.header}>
       <div className={styles.pageMargin}>
         <Link to="/" className={styles.logoLink}>

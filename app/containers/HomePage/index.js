@@ -68,18 +68,18 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   }
   renderLandingPage() {
     const steps = [
-      { text: 'You describe and provide photos for the sessions already in your booking system', img: '/images/landing-step1.png' },
-      { text: 'We publish this rich data alongside your booking system\'s basic data', img: '/images/landing-step2.png' },
-      { text: '100s more people can find your sessions and feel informed enough to book', img: '/images/landing-step3.png' }
+      { text: 'Add more information and photos to the activities that are already in your booking system', img: '/images/landing-step1.png' },
+      { text: 'Publish this rich data to complement your booking system\'s existing basic data', img: '/images/landing-step2.png' },
+      { text: '100s more people can find your activities and feel informed enough to book', img: '/images/landing-step3.png' }
     ];
     const { stats } = this.state;
     return (<div className={styles.landing}>
       <Banner>
-        <h1>Get your sessions found</h1>
-        <h2>Make your physical activities discoverable</h2>
+        <h1>Make your activities discoverable</h1>
+        <h2>Help more people to find your activities online</h2>
         <br /><br />
-        <Authenticated out={<LoginButton redirect="/session/add"><b>+</b> Add a session</LoginButton>}>
-          <p><Link to="/session/add"><b>+</b> Add a session</Link></p>
+        <Authenticated out={<LoginButton redirect="/session/add"><b>+</b> Add an activity</LoginButton>}>
+          <p><Link to="/session/add"><b>+</b> Add an activity</Link></p>
         </Authenticated>
       </Banner>
       <div className={styles.steps}>
@@ -91,9 +91,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
           </li>))]}
         </ol>
         <p><LoginButton button redirect="/session/add">Get started</LoginButton></p>
-        {stats ? <p><span className={styles.stats}>{stats.sessions.published}</span> sessions published and counting!</p> : null}
       </div>
-      {this.context.user ? null : this.renderMarketingSections()}
     </div>);
   }
   render() {

@@ -311,7 +311,7 @@ export default class SessionForm extends React.Component { // eslint-disable-lin
     const { session } = this.state;
     const { headerText } = this.props;
     return (<div className={styles.form}>
-      <Authenticated message="You must login before you can add a session">
+      <Authenticated message="You must login before you can add an activity">
         {headerText ? <PublishHeader h2={headerText} h3={session.title || <i>Untitled</i>} actions={this.getActions()} /> : null}
         <div className={styles.formBody}>
           {this.state.isLoading ? <LoadingMessage message="Loading" ellipsis /> : this.renderForm()}

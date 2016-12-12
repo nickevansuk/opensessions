@@ -57,7 +57,7 @@ export default class SessionList extends React.Component { // eslint-disable-lin
       <ol className={styles.list}>
         {sessions.map(session => <li key={session.uuid}><SessionTileView session={session} /></li>)}
       </ol>
-      {hideButton ? null : <p><Button to="/session/add">+ Add a session</Button></p>}
+      {hideButton ? null : <p><Button to="/session/add">+ Add an activity</Button></p>}
     </div>);
   }
 }

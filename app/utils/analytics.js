@@ -16,8 +16,4 @@ export default function trackPage(href, pathname) {
       path: generalPathname
     });
   }
-
-  IntercomAPI('trackEvent', 'page-nav', {
-    'New location': pathname
-  });
 }

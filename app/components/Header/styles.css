@@ -16,10 +16,9 @@
       font-size: 2rem;
       padding: .25em 0 .25em .5em;
       & img {
-        max-height: 2.5em;
+        max-height: 4em;
         &.logo {
           margin-bottom: -.25em;
-          max-width: 7.5em;
         }
         &.beta {
           width: 2em;
