@@ -82,9 +82,9 @@ export default class Form extends React.Component { // eslint-disable-line react
       const propFieldset = fieldsets[key];
       const { slug } = propFieldset;
       const className = activeTab === slug ? styles.active : '';
-      let isComplete = <span className={styles.tickNone}><FieldsetStatusSVG /></span>;
+      let isComplete = /*<span className={styles.tickNone}><FieldsetStatusSVG /></span>;
       if (validity === true) isComplete = <span className={styles.tick}><img role="presentation" src="/images/tick.svg" /></span>;
-      else if (validity === 'none') isComplete = null;
+      else if (validity === 'none') isComplete = */ null;
       return [heading ? <h1 key={heading}>{heading}</h1> : null, <Link className={className} to={this.getSlugURL(slug)} key={key}>{label} {isComplete}</Link>];
     });
   }

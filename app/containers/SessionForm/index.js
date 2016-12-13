@@ -228,7 +228,7 @@ export default class SessionForm extends React.Component { // eslint-disable-lin
         });
       })
       : apiModel.new('session', location.query).then(res => {
-        if (!(location.hash && location.hash === '#welcome')) this.notify('You have created a new session', 'success');
+        if (!(location.hash && location.hash === '#welcome')) this.notify('You have created a new activity', 'success');
         this.context.router.replace(`${res.instance.href}/edit`);
       });
   }
