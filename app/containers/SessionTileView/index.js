@@ -110,12 +110,6 @@ export default class SessionTileView extends React.Component { // eslint-disable
           <div className={[styles.state, state === 'published' ? styles.live : ''].join(' ')}>{state}</div>
         </div>
       </div>
-      <div className={styles.schedules}>
-        <div>{schedules.length} SCHEDULED</div>
-        <ol>
-          {schedules.length ? schedules : this.renderAddSchedule()}
-        </ol>
-      </div>
     </article>);
   }
 }
