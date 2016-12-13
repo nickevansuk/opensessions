@@ -67,7 +67,7 @@ export default class SessionForm extends React.Component { // eslint-disable-lin
         { slug: 'additional', /*required: ['leader'],*/ props: { validity: 'none' }, fields: ['preparation', /*'leader',*/ 'hasCoaching'] },
         { slug: 'location', /*required: ['location'],*/ props: { validity: 'none' }, fields: [/*'location',*/ 'meetingPoint'] },
         //{ slug: 'pricing', props: { validity: 'none' }, fields: ['pricing'] },
-        { slug: 'restrictions', s: { validity: 'none' }, fields: ['genderRestriction', 'minAgeRestriction', 'maxAgeRestriction', 'abilityRestriction'] },
+        { slug: 'restrictions', props: { validity: 'none' }, fields: ['genderRestriction', 'minAgeRestriction', 'maxAgeRestriction', 'abilityRestriction'] },
         //{ slug: 'contact', props: { validity: 'none' }, fields: ['contactName', 'contactEmail', 'contactPhone'] },
         { slug: 'social', props: { validity: 'none' }, fields: ['socialWebsite', 'socialFacebook', 'socialInstagram', 'socialTwitter', 'socialHashtag'] },
         { slug: 'photo', props: { validity: 'none' }, fields: ['image'] } //,
