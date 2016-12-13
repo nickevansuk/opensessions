@@ -113,7 +113,6 @@ export default class Form extends React.Component { // eslint-disable-line react
           <div className={styles.navLinks}>
             {this.renderNav()}
           </div>
-          <!-- <div className={styles.pending}>{pendingSteps ? <p>Complete <b>{`${pendingSteps} more`}</b> step{pendingSteps > 1 ? 's' : ''} to finish your listing</p> : 'Ready to publish!'}</div> -->
         </nav>
         <div className={styles.tabs}>
           <div className={[styles.saveState, styles[saveState || 'unsaved']].join(' ')}>{this.state.saveState}</div>
