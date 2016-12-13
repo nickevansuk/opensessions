@@ -67,21 +67,6 @@ export default class AuthModal extends React.Component { // eslint-disable-line 
       }
     });
   }
-  hashFn(str, asString) {
-      /*jshint bitwise:false */
-      var i, l,
-          hval = 0x811c9dc5;
-
-      for (i = 0, l = str.length; i < l; i++) {
-          hval ^= str.charCodeAt(i);
-          hval += (hval << 1) + (hval << 4) + (hval << 7) + (hval << 8) + (hval << 24);
-      }
-      if( asString ){
-          // Convert to 8 digit hex string
-          return ("0000000" + (hval >>> 0).toString(16)).substr(-8);
-      }
-      return hval >>> 0;
-  }
   signUp() {
     const { form } = this.state;
     if (!form.password) {
@@ -89,9 +74,6 @@ export default class AuthModal extends React.Component { // eslint-disable-line 
       return;
     } else if (form.password !== form.password2) {
       this.setState({ error: 'Passwords do not match' });
-      return;
-    } else if (form.entrycode && hashFn(form.entrycode, false) != 411910439) {
-      this.setState({ error: 'Invalid entry code' });
       return;
     }
     this.setState({ isLoading: true });
@@ -170,7 +152,6 @@ export default class AuthModal extends React.Component { // eslint-disable-line 
           {this.renderQuestion('Email', { name: 'email', props: { value: email, autoFocus: !email, type: 'email' } })}
           {this.renderQuestion('Choose a password', { name: 'password', props: { autoFocus: email, type: 'password' } })}
           {this.renderQuestion('Re-type password', { name: 'password2', props: { type: 'password' } })}
-          {this.renderQuestion('Entry code', { name: 'entrycode', props: { type: 'password' } })}
           <Button onClick={() => this.signUp()}>Create Account</Button>
         </GenericForm>
         {this.renderLink('I already have an account', () => this.context.modal.dispatch({ component: <AuthModal /> }))}

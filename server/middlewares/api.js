@@ -23,8 +23,7 @@ dotenv.load();
 
 module.exports = (database) => {
   const api = express();
-  //HACK: Hard code single user for whole system hack
-  const getUser = req => (req.user ? (req.user.sub ? "auth0|584f3a6138c16005de366adb" : null) : null);
+  const getUser = req => (req.user ? req.user.sub : null);
   const logRequests = (req, res, next) => { // eslint-disable-line no-unused-vars
     console.log(':: /api', req.path);
     next();
