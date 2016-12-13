@@ -181,9 +181,9 @@ module.exports = (DataTypes) => ({
           canPublish() {
             const session = this;
             const required = {
-              title: { tab: 'description', pretty: 'Session Title' },
+              title: { tab: 'description', pretty: 'Activity Title' },
               OrganizerUuid: { tab: 'description', pretty: 'Organiser Name' },
-              description: { tab: 'description', pretty: 'Session Description' } //,
+              description: { tab: 'description', pretty: 'Activity Description' } //,
               //leader: { tab: 'additional', pretty: 'Leader' },
               //location: { tab: 'location', pretty: 'Address' }
             };
@@ -195,7 +195,7 @@ module.exports = (DataTypes) => ({
                 .join(', ')}`);
             }
             if (session.Activities && !session.Activities.length) {
-              errors.push('You need to add an <a data-tab="description" data-field="Activity Type">activity type</a>');
+              errors.push('You need to add an <a data-tab="description" data-field="Activity Category">activity category</a>');
             }
             /*
             if (session.schedule && session.schedule.length) {
