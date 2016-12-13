@@ -109,10 +109,6 @@ export default class App extends React.Component { // eslint-disable-line react/
         this.context.router.push('/');
         this.setState({ profile: null });
       };
-      
-      //HACK - one profile to keep everything together
-      profile.user_id = "single-user-mode";
-
       this.setState({ profile, isLoadingUser: false });
 
       const { analytics } = window;
