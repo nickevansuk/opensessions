@@ -7,6 +7,6 @@ export default class SessionEdit extends React.Component { // eslint-disable-lin
     params: PropTypes.object,
   }
   render() {
-    return <SessionForm headerText="Edit session" {...this.props} />;
+    return <SessionForm headerText="Edit activity" {...this.props} />;
   }
 }

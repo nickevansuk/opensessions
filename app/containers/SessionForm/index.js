@@ -64,14 +64,14 @@ export default class SessionForm extends React.Component { // eslint-disable-lin
       copy: formCopy,
       fieldsets: [
         { slug: 'description', required: ['title', 'OrganizerUuid', 'description', 'Activities'], fields: ['title', 'OrganizerUuid', 'description', 'Activities'], props: { validity: false } },
-        { slug: 'additional', required: ['leader'], props: { validity: false }, fields: ['preparation', 'leader', 'hasCoaching'] },
-        { slug: 'location', required: ['location'], props: { validity: false }, fields: ['location', 'meetingPoint'] },
-        { slug: 'pricing', props: { validity: 'none' }, fields: ['pricing'] },
+        { slug: 'additional', /*required: ['leader'],*/ props: { validity: false }, fields: ['preparation', /*'leader',*/ 'hasCoaching'] },
+        { slug: 'location', /*required: ['location'],*/ props: { validity: false }, fields: [/*'location',*/ 'meetingPoint'] },
+        //{ slug: 'pricing', props: { validity: 'none' }, fields: ['pricing'] },
         { slug: 'restrictions', props: { validity: 'none' }, fields: ['genderRestriction', 'minAgeRestriction', 'maxAgeRestriction', 'abilityRestriction'] },
-        { slug: 'contact', props: { validity: 'none' }, fields: ['contactName', 'contactEmail', 'contactPhone'] },
+        //{ slug: 'contact', props: { validity: 'none' }, fields: ['contactName', 'contactEmail', 'contactPhone'] },
         { slug: 'social', props: { validity: 'none' }, fields: ['socialWebsite', 'socialFacebook', 'socialInstagram', 'socialTwitter', 'socialHashtag'] },
-        { slug: 'photo', props: { validity: 'none' }, fields: ['image'] },
-        { slug: 'schedule', required: ['schedule'], props: { validity: false }, fields: ['schedule'] }
+        { slug: 'photo', props: { validity: 'none' }, fields: ['image'] } //,
+        //{ slug: 'schedule', required: ['schedule'], props: { validity: false }, fields: ['schedule'] }
       ],
       fields: {
         title: () => <TextField validation={{ maxLength: 50 }} {...this.getAttr('title')} />,

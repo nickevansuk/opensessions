@@ -2,44 +2,44 @@
   "fieldsets": {
     "description": {
       "label": "Description",
-      "heading": "Session Info",
-      "title": "Add details about your session",
+      "heading": "Activity Info",
+      "title": "Add details about your activity",
       "subtitle": "You'll be able to edit these details later"
     },
     "additional": {
       "label": "Additional info",
-      "title": "Add details about your session",
+      "title": "Add details about your activity",
       "subtitle": "You'll be able to edit these details later"
     },
     "location": {
       "label": "Location",
-      "title": "Where is your session happening?",
-      "subtitle": "Select a location and let participants know about any meeting instructions"
+      "title": "Where do I go when I get to the site?",
+      "subtitle": "Let participants know about any meeting instructions"
     },
     "pricing": {
       "label": "Pricing",
-      "title": "How much does your session cost?",
+      "title": "How much does your activity cost?",
       "subtitle": "You can add more than one pricing option"
     },
     "restrictions": {
       "label": "Who it's for",
-      "title": "Who is your session for?",
+      "title": "Who is your activity for?",
       "subtitle": "Specify any restrictions that apply and disabilities catered for"
     },
     "contact": {
       "label": "Contact info",
-      "title": "Who can people talk to about this session?",
+      "title": "Who can people talk to about this activity?",
       "subtitle": "Help potential attendees by providing details of who they can contact"
     },
     "social": {
       "label": "Social media",
-      "title": "Where can people find more information about your session online?",
+      "title": "Where can people find more information about your activity online?",
       "subtitle": "Help potential attendees by providing links where they can find out more"
     },
     "photo": {
       "label": "Photo",
-      "title": "Add a photo of your session",
-      "subtitle": "Show people what to expect from this session"
+      "title": "Add a photo of your activity",
+      "subtitle": "Show people what to expect from this activity"
     },
     "schedule": {
       "label": "Add a schedule",
@@ -50,41 +50,41 @@
   },
   "fields": {
     "title": {
-      "label": "Session Title",
-      "tip": "Enter a title for your session",
+      "label": "Activity Title",
+      "tip": "Enter a title for your activity. Note that the dates and times of activities will be pulled from the booking system, so there is no need to include this here.",
       "example": "E.g. Volleyball training"
     },
     "OrganizerUuid": {
-      "label": "Organiser Name",
-      "tip": "Enter the name of your club or organisation. If you don't represent a club or organisation, enter your own name",
-      "example": "E.g. Richmond Volleyball"
+      "label": "Site Name",
+      "tip": "Enter the name of the site",
+      "example": "E.g. Atherton Leisure Centre"
     },
     "description": {
-      "label": "Session Description",
-      "tip": "Let people know what's great about the session! Remember: the more detail you provide, the more likely people are to decide to attend.",
-      "example": "Tips: Who is this session for? What benefits will people get from it? What will the session be like? What will we do? Is any prior experience needed?"
+      "label": "Activity Description",
+      "tip": "Let people know what's great about the activity! Remember: the more detail you provide, the more likely people are to decide to attend.",
+      "example": "Tips: Who is this activity for? What benefits will people get from it? What will the activity be like? What will we do? Is any prior experience needed?"
     },
     "ActivityUuid": {
-      "label": "Sport or activity type",
-      "tip": "Enter the type of activity or sport on offer for this session. If multiple activities are on offer at this session, please write 'Multiple Activities'",
+      "label": "Sport or activity category",
+      "tip": "Enter the type of activity or sport on offer.",
       "placeholder": "E.g. Volleyball",
       "example": "E.g. Volleyball"
     },
     "Activities": {
-      "label": "Sport or activity type",
-      "tip": "Enter the type of activity or sport on offer for this session. If multiple activities are on offer at this session, please write 'Multiple Activities'",
+      "label": "Sport or activity category",
+      "tip": "Enter the type of activity or sport on offer.",
       "placeholder": "E.g. Volleyball",
       "example": "E.g. Volleyball"
     },
     "preparation": {
       "label": "Is there anything participants should bring?",
       "tipTitle": "What to bring",
-      "tip": "Let participants know how to prepare for your session. Is there anything they will need to bring?"
+      "tip": "Let participants know how to prepare for your activity. Is there anything they will need to bring?"
     },
     "leader": {
-      "label": "Who is the leader for this session?",
+      "label": "Who is the leader for this activity?",
       "tipTitle": "Session Leader",
-      "tip": "Enter the name of the person who will be leading the session. It's helpful for participants to know who's in charge when they arrive",
+      "tip": "Enter the name of the person who will be leading the activity. It's helpful for participants to know who's in charge when they arrive",
       "example": "E.g. John Smith"
     },
     "hasCoaching": {
@@ -127,12 +127,12 @@
     "abilityRestriction": {
       "label": "Are you able to offer support to people with disabilities?",
       "tipTitle": "Disability support",
-      "tip": "Please tick all disabilities that you can cater for in your session. If you are not sure, do not tick any",
+      "tip": "Please tick all disabilities that you can cater for in your activity. If you are not sure, do not tick any",
       "fullSize": true
     },
     "contactName": {
       "label": "Full name",
-      "tip": "Who's the best person for attendees to contact if they have questions about this session?"
+      "tip": "Who's the best person for attendees to contact if they have questions about this activity?"
     },
     "contactEmail": {
       "label": "Email address",
@@ -144,7 +144,7 @@
     },
     "socialWebsite": {
       "label": "Website",
-      "tip": "Enter the website URL where potential attendees can find out more information about your sessions. Linking to the specific page on your site that relates to the session is better if possible"
+      "tip": "Enter the website URL where potential attendees can find out more information about your activities. Linking to the specific page on your site that relates to the activity is better if possible"
     },
     "socialFacebook": {
       "label": "Facebook page or group",
@@ -162,14 +162,14 @@
     },
     "socialHashtag": {
       "label": "Hashtag",
-      "tip": "Enter the Hashtag for your session, if you have one",
+      "tip": "Enter the Hashtag for your activity, if you have one",
       "example": "E.g. #UseYourRun"
     },
     "image": {
       "fullSize": true,
       "tipType": "inline",
-      "tipTitle": "upload a real photo of your session",
-      "tip": "People are much more likely to attend a session if it has a real photo (One taken on your smartphone will do)"
+      "tipTitle": "upload a real photo of your activity",
+      "tip": "People are much more likely to attend an activity if it has a real photo (One taken on your smartphone will do)"
     },
     "schedule": {
       "fullSize": true
