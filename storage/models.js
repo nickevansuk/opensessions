@@ -183,9 +183,9 @@ module.exports = (DataTypes) => ({
             const required = {
               title: { tab: 'description', pretty: 'Session Title' },
               OrganizerUuid: { tab: 'description', pretty: 'Organiser Name' },
-              description: { tab: 'description', pretty: 'Session Description' },
-              leader: { tab: 'additional', pretty: 'Leader' },
-              location: { tab: 'location', pretty: 'Address' }
+              description: { tab: 'description', pretty: 'Session Description' } //,
+              //leader: { tab: 'additional', pretty: 'Leader' },
+              //location: { tab: 'location', pretty: 'Address' }
             };
             const errors = [];
             const missingFields = Object.keys(required).filter(key => !session[key]).map(key => required[key]);
@@ -197,6 +197,7 @@ module.exports = (DataTypes) => ({
             if (session.Activities && !session.Activities.length) {
               errors.push('You need to add an <a data-tab="description" data-field="Activity Type">activity type</a>');
             }
+            /*
             if (session.schedule && session.schedule.length) {
               if (!session.schedule.every(slot => slot.startDate && slot.startTime && slot.endTime)) {
                 errors.push('You must complete <a data-tab="schedule" data-field="schedule">schedule</a> information');
@@ -209,6 +210,7 @@ module.exports = (DataTypes) => ({
                 errors.push('You need to complete <a data-tab="pricing" data-field="pricing">pricing</a> information');
               }
             }
+            */
             if (errors.length) throw new Error(`<b>We can't publish this yet!</b> ${errors.join('. ')}`);
             return true;
           },
