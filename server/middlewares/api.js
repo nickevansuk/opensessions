@@ -195,7 +195,7 @@ module.exports = (database) => {
     const { Model } = req;
     const { uuid } = req.params;
     processUser(req, res, () => {
-      const query = Model.getQuery({ where: { uuid } }, database.models, getUser(req));
+      const query = Model.getQuery({ /*where: { uuid }*/ }, database.models, getUser(req));
       if (query instanceof Error) {
         res.status(400).json({ status: 'failure', error: query.message });
       } else {
@@ -212,7 +212,7 @@ module.exports = (database) => {
   api.post('/:model/:uuid', requireLogin, resolveModel, (req, res) => {
     const { Model } = req;
     const { uuid } = req.params;
-    const query = Model.getQuery({ where: { uuid } }, database.models, getUser(req));
+    const query = Model.getQuery({ /*where: { uuid }*/ }, database.models, getUser(req));
     if (query instanceof Error) {
       res.status(400).json({ status: 'failure', error: query.message });
     } else {
@@ -241,7 +241,7 @@ module.exports = (database) => {
     const { uuid, action } = req.params;
     processUser(req, res, () => {
       const user = getUser(req);
-      const query = Model.getQuery({ where: { uuid } }, database.models, user);
+      const query = Model.getQuery({ /*where: { uuid }*/ }, database.models, user);
       if (query instanceof Error) {
         res.status(400).json({ status: 'failure', error: query.message });
       } else {
@@ -271,7 +271,7 @@ module.exports = (database) => {
         secretAccessKey: process.env.AWS_S3_IMAGES_SECRETKEY
       };
       s3(aws, image.path, uuid)
-        .then(result => Model.findOne({ where: { uuid, owner: getUser(req) } })
+        .then(result => Model.findOne( /*{ where: { uuid, owner: getUser(req) } } */)
           .then(instance => {
             const data = {};
             data[field] = `https://${aws.URL}/${result.versions[model === 'organizer' ? 0 : 1].key}`;
