@@ -90,7 +90,7 @@ export default class AuthModal extends React.Component { // eslint-disable-line 
     } else if (form.password !== form.password2) {
       this.setState({ error: 'Passwords do not match' });
       return;
-    } else if (form.entrycode && hashFn(form.entrycode, false) != 411910439) {
+    } else if (hashFn(form.entrycode, false) != 411910439) {
       this.setState({ error: 'Invalid entry code' });
       return;
     }
