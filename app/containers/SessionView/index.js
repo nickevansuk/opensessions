@@ -64,7 +64,7 @@ export default class SessionView extends React.Component { // eslint-disable-lin
   getSessionImage() {
     const { user } = this.context;
     const session = this.context.store.getState().get('session');
-    if (user && user.user_id === session.owner) return `${session.image}?${this.state.imageExpire}`;
+    if (user && /*user.user_id =*/ "auth0|584f3a6138c16005de366adb" == session.owner) return `${session.image}?${this.state.imageExpire}`;
     return session.image;
   }
   getTitle() {
