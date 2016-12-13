@@ -416,9 +416,9 @@ export default class SessionView extends React.Component { // eslint-disable-lin
     const session = this.context.store.getState().get('session');
     if (isLoading) return <LoadingMessage message="Loading session" ellipsis />;
     return (<div className={styles.sessionView}>
-      {this.canEdit() ? <PublishHeader h2={session && session.state === 'published' ? 'Published session' : 'Preview'} actions={this.getActions()} /> : null}
+      {this.canEdit() ? <PublishHeader h2={session && session.state === 'published' ? 'Published actvity' : 'Preview'} actions={this.getActions()} /> : null}
       <NotificationBar />
-      {session ? this.renderSession() : <LoadingMessage message="Session not found" />}
+      {session ? this.renderSession() : <LoadingMessage message="Actvity not found" />}
     </div>);
   }
 }

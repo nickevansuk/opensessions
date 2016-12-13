@@ -64,8 +64,8 @@ export default class SessionForm extends React.Component { // eslint-disable-lin
       copy: formCopy,
       fieldsets: [
         { slug: 'description', required: ['title', 'OrganizerUuid', 'description', 'Activities'], fields: ['title', 'OrganizerUuid', 'description', 'Activities'], props: { validity: false } },
-        { slug: 'additional', /*required: ['leader'],*/ props: { validity: false }, fields: ['preparation', /*'leader',*/ 'hasCoaching'] },
-        { slug: 'location', /*required: ['location'],*/ props: { validity: false }, fields: [/*'location',*/ 'meetingPoint'] },
+        { slug: 'additional', /*required: ['leader'],*/ props: { validity: 'none' }, fields: ['preparation', /*'leader',*/ 'hasCoaching'] },
+        { slug: 'location', /*required: ['location'],*/ props: { validity: 'none' }, fields: [/*'location',*/ 'meetingPoint'] },
         //{ slug: 'pricing', props: { validity: 'none' }, fields: ['pricing'] },
         { slug: 'restrictions', props: { validity: 'none' }, fields: ['genderRestriction', 'minAgeRestriction', 'maxAgeRestriction', 'abilityRestriction'] },
         //{ slug: 'contact', props: { validity: 'none' }, fields: ['contactName', 'contactEmail', 'contactPhone'] },
@@ -269,8 +269,8 @@ export default class SessionForm extends React.Component { // eslint-disable-lin
       });
     });
   }
-  publishSession = () => this.changeSessionState('published').then(() => this.notify('Your session has been published!', 'success')).then(() => this.context.router.push(this.state.session.href))
-  unpublishSession = () => this.changeSessionState('unpublished').then(() => this.notify('Your session has been unpublished!', 'warn'))
+  publishSession = () => this.changeSessionState('published').then(() => this.notify('Your actvity has been published!', 'success')).then(() => this.context.router.push(this.state.session.href))
+  unpublishSession = () => this.changeSessionState('unpublished').then(() => this.notify('Your actvity has been unpublished!', 'warn'))
   addName = key => name => {
     // const names = [name].concat(this.state.customNames || []);
     // this.setState({ customNames: names.filter((n, k) => names.indexOf(n) === k) });
